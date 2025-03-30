@@ -19,10 +19,10 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore MoralSupport.Tasks/Web/MoralSupport.Tasks.Web.csproj
 
     - name: Build project
-      run: dotnet build --configuration Release
+      run: dotnet build MoralSupport.Tasks/Web/MoralSupport.Tasks.Web.csproj --configuration Release
 
     - name: Publish Razor Pages
       run: dotnet publish MoralSupport.Tasks/Web/MoralSupport.Tasks.Web.csproj --configuration Release --output publish
