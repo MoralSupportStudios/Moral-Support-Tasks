@@ -1,10 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using MoralSupport.Tasks.Application.Interfaces;
+using MoralSupport.Tasks.Infrastructure.Data;
+using MoralSupport.Tasks.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddRazorPages();
 
-var app = builder.Build();
+builder.Services.AddDbContext<TasksDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("LocalConnection"));
+});
 
+builder.Services.AddScoped<ITaskRepository, SqlTaskRepository>();
+
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
