@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MoralSupport.Tasks.Domain.Enums;
 using TaskStatus = MoralSupport.Tasks.Domain.Enums.TaskStatus;
 
-namespace MoralSupport.Tasks.Domain.Enums
+namespace MoralSupport.Tasks.Domain.Entities
 {
     public class TaskItem
     {
