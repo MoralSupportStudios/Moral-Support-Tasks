@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MoralSupport.Tasks.Domain.Enums
 {
-    internal class TaskStatus
+    public enum TaskStatus
     {
+        Pending,
+        InProgress,
+        Completed
     }
 }
