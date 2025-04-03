@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MoralSupport.Tasks.Domain.Enums;
-using TaskStatus = MoralSupport.Tasks.Domain.Enums.TaskStatus;
-
-namespace MoralSupport.Tasks.Domain.Entites
+﻿namespace MoralSupport.Tasks.Domain.Entities
 {
     public class TaskItem
     {

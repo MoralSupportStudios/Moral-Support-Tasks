@@ -1,19 +1,19 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using MoralSupport.Tasks.Domain.Entities;
+using MoralSupport.Tasks.Infrastructure.Data;
 
-namespace Web.Pages;
-
-public class IndexModel : PageModel
+namespace MoralSupport.Tasks.Web.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    public class IndexModel(TasksDbContext context) : PageModel
     {
-        _logger = logger;
-    }
+        private readonly TasksDbContext _context = context;
 
-    public void OnGet()
-    {
+        public IList<TaskItem> TaskItem { get; set; } = default!;
 
+        public async Task OnGetAsync()
+        {
+            TaskItem = await _context.Tasks.ToListAsync();
+        }
     }
 }
