@@ -19,7 +19,7 @@ This MVP includes:
 - **Backend:** Clean Architecture (Domain → Application → Infrastructure → Web)  
 - **Database:** SQL Server (local dev) → Supabase (planned)  
 - **Deployment:** Local (future: self-hosted or cloud)  
-- **Testing:** NUnit  
+- **Testing:** NUnit + Moq  
 
 ---
 
@@ -30,7 +30,8 @@ MoralSupport.Tasks.sln
 ├── MoralSupport.Tasks.Domain/         # Entities & Enums
 ├── MoralSupport.Tasks.Application/    # Interfaces & Business Logic
 ├── MoralSupport.Tasks.Infrastructure/ # Repositories & EF DbContext
-└── MoralSupport.Tasks.Web/            # Razor UI + Configuration
+├── MoralSupport.Tasks.Web/            # Razor UI + Configuration
+└── MoralSupport.Tasks.Tests/          # NUnit + Moq unit tests
 ```
 
 ---
@@ -50,7 +51,7 @@ MoralSupport.Tasks.sln
      }
    }
    ```
-4. Open **Package Manager Console** and run:
+4. Open **Package Manager Console** in Visual Studio and run:
    ```powershell
    Update-Database -StartupProject MoralSupport.Tasks.Web
    ```
@@ -86,4 +87,4 @@ If you're on the Moral Support Studios team (hi Nubchulubs12 👋):
 - Use GitHub Projects to track tasks  
 - Submit Pull Requests and request reviews before merging  
 - Keep logic in Domain and Application layers where possible — frontend should be mostly passive  
-- Follow Clean Architecture patterns and keep services injectable
+- Follow Clean Architecture patterns and keep services injectable  
