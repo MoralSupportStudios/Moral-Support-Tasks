@@ -1,7 +1,7 @@
 ﻿using Moq;
 using MoralSupport.Tasks.Application.Interfaces;
 using MoralSupport.Tasks.Application.Services;
-using MoralSupport.Tasks.Domain.Entities;
+using MoralSupport.Tasks.Domain.Enums;
 
 namespace MoralSupport.Tasks.Tests.Services
 {

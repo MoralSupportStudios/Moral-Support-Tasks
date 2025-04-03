@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using MoralSupport.Tasks.Domain.Entities;
+using MoralSupport.Tasks.Domain.Enums;
 using MoralSupport.Tasks.Infrastructure.Data;
 
 namespace MoralSupport.Tasks.Web.Pages

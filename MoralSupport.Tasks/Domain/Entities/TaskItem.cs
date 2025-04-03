@@ -1,4 +1,4 @@
-﻿namespace MoralSupport.Tasks.Domain.Entities
+﻿namespace MoralSupport.Tasks.Domain.Enums
 {
     public class TaskItem
     {
@@ -9,7 +9,7 @@
 
         public DateTime DueDate { get; set; }
 
-        public TaskStatus Status { get; set; } = TaskStatus.Pending;
+        public TaskStatus Status { get; set; }
 
         public int AssignedUserId { get; set; }
 

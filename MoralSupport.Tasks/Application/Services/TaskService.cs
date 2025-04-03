@@ -1,5 +1,5 @@
 ﻿using MoralSupport.Tasks.Application.Interfaces;
-using MoralSupport.Tasks.Domain.Entities;
+using MoralSupport.Tasks.Domain.Enums;
 
 namespace MoralSupport.Tasks.Application.Services
 {

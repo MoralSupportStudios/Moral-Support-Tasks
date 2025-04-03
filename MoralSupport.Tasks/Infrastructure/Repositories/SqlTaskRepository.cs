@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MoralSupport.Tasks.Application.Interfaces;
-using MoralSupport.Tasks.Domain.Entities;
+using MoralSupport.Tasks.Domain.Enums;
 using MoralSupport.Tasks.Infrastructure.Data;
 
 namespace MoralSupport.Tasks.Infrastructure.Repositories
