@@ -10,8 +10,4 @@
     <ProjectReference Include="..\Domain\MoralSupport.Tasks.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>

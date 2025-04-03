@@ -1,12 +1,13 @@
 ﻿using MoralSupport.Tasks.Domain.Entities;
 
-namespace MoralSupport.Tasks.Application.Interfaces
+namespace MoralSupport.Tasks.Application.Services
 {
-    public interface ITaskRepository
+    public interface ITaskService
     {
         Task<List<TaskItem>> GetAllTasksAsync();
+        Task<TaskItem?> GetTaskByIdAsync(int id);
         Task AddTaskAsync(TaskItem task);
         Task UpdateTaskAsync(TaskItem task);
-        Task DeleteTaskAsync(int taskId);
+        Task DeleteTaskAsync(int id);
     }
 }

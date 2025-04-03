@@ -398,3 +398,15 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Developer-specific config
+**/appsettings.Development.json
+
+# Local SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Environment-specific overrides
+.env
+.env.*
