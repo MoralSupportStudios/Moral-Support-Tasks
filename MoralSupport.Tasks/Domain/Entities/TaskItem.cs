@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MoralSupport.Tasks.Domain.Enums;
-using TaskStatus = MoralSupport.Tasks.Domain.Enums.TaskStatus;
-
-namespace MoralSupport.Tasks.Domain.Entities
+﻿namespace MoralSupport.Tasks.Domain.Enums
 {
     public class TaskItem
     {
@@ -17,7 +9,7 @@ namespace MoralSupport.Tasks.Domain.Entities
 
         public DateTime DueDate { get; set; }
 
-        public TaskStatus Status { get; set; } = TaskStatus.Pending;
+        public TaskStatus Status { get; set; }
 
         public int AssignedUserId { get; set; }
 

@@ -1,0 +1,60 @@
+﻿@page
+@model MoralSupport.Tasks.Web.Pages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>TaskItem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TaskItem.Title" class="control-label"></label>
+                <input asp-for="TaskItem.Title" class="form-control" />
+                <span asp-validation-for="TaskItem.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskItem.Description" class="control-label"></label>
+                <input asp-for="TaskItem.Description" class="form-control" />
+                <span asp-validation-for="TaskItem.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskItem.DueDate" class="control-label"></label>
+                <input asp-for="TaskItem.DueDate" class="form-control" />
+                <span asp-validation-for="TaskItem.DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskItem.Status" class="control-label"></label>
+                <select id="statusDropdown" name="TaskItem.Status" class="form-control"></select>
+                <span asp-validation-for="TaskItem.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskItem.AssignedUserId" class="control-label"></label>
+                <input asp-for="TaskItem.AssignedUserId" class="form-control" />
+                <span asp-validation-for="TaskItem.AssignedUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskItem.OrgId" class="control-label"></label>
+                <input asp-for="TaskItem.OrgId" class="form-control" />
+                <span asp-validation-for="TaskItem.OrgId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
